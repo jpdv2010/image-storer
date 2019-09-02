@@ -14,6 +14,12 @@ public class Image implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "image")
     private List<Pixel> pixels;
 
+    @Column(name = "IS_IMAGE_WIDTH")
+    private Long width;
+
+    @Column(name = "IS_IMAGE_HEIGHT")
+    private Long height;
+
     public Long getId() {
         return id;
     }
