@@ -24,7 +24,7 @@ public class DownloadController {
     private ImageService imageService;
 
     @GetMapping("/download/{id}") // //new annotation since 4.3
-    public ResponseEntity singleFileUpload(@PathVariable(name = "id") Long id) throws IOException {
+    public ResponseEntity singleFileUpload(@PathVariable(name = "id") Long id) throws Exception {
         BufferedImage image = imageService.getBIById( id );
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
