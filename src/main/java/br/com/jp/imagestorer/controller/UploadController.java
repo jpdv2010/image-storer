@@ -5,7 +5,6 @@ import br.com.jp.imagestorer.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -40,7 +39,7 @@ public class UploadController {
             ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
             BufferedImage bImage2 = ImageIO.read(bis);
 
-            image = imageService.saveFromBufferedImage( bImage2 );
+            image = imageService.saveFromBI( bImage2 );
 
         } catch ( IOException e) {
             e.printStackTrace();

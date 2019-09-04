@@ -55,7 +55,7 @@ public class Image implements Serializable {
     }
 
     public Long getRGB( Long x, Long y ) throws Exception {
-        List<Pixel> filteredPixels = new ArrayList<>();
+        List< Pixel > filteredPixels;
         if( !this.pixels.isEmpty() ){
             filteredPixels = this.pixels
                     .stream()

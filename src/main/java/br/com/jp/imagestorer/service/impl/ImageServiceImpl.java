@@ -24,7 +24,7 @@ public class ImageServiceImpl implements ImageService {
     }
 
     @Override
-    public Image saveFromBufferedImage(BufferedImage bufferedImage){
+    public Image saveFromBI(BufferedImage bufferedImage){
         int width = bufferedImage.getWidth();
         int height = bufferedImage.getHeight();
 
